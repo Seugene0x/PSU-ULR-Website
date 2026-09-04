@@ -292,6 +292,221 @@ nav {
     text-align: center;
 }
 
+/* Events section styles - LAYOUT 1 (Commented out) */
+/*
+.events-section {
+    padding: 48px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+}
+
+.events-sidebar {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.events-sidebar-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.events-content {
+    flex: 1;
+}
+*/
+
+/* Events section styles - LAYOUT 2 */
+.events-section-2 {
+    padding: 48px 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.events-header-2 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.events-header-image-2 {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.events-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+}
+
+.event-item-2 {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.event-flyer-container-2 {
+    flex: 0 0 300px;
+    position: relative;
+}
+
+.event-flyer-2 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.event-placeholder-2 {
+    width: 100%;
+    height: 400px;
+    background-color: #06013b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.event-date-overlay-2 {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.date-badge-2 {
+    background-color: #06013b;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.time-badge-2 {
+    background-color: white;
+    color: #06013b;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.event-info-box-2 {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-info-box-2 h2 {
+    color: #06013b;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.event-info-box-2 p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.event-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.event-date {
+    background-color: #06013b;
+    color: white;
+    padding: 24px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.event-month {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.event-day {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.event-year {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.event-time {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.event-details {
+    padding: 24px 32px;
+    flex: 1;
+}
+
+.event-details h2 {
+    color: #06013b;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.event-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.event-details p:last-child {
+    margin-bottom: 0;
+}
+
+.event-image-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+    margin-top: -240px;
+    margin-right: -230px;
+}
+
+.event-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Volumes section styles */
 .volumes-section {
     padding: 48px 32px;
@@ -428,8 +643,11 @@ nav {
 
 /* Logo */
 .logo {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero {
@@ -439,6 +657,30 @@ nav {
     align-items: center;
     text-align: center;
     padding: 80px 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.5;
+    z-index: 0;
+    border: 20px solid #06013b;
+    box-sizing: border-box;
+}
+
+.hero .logo,
+.hero h1,
+.hero p,
+.hero .hero-button {
+    position: relative;
+    z-index: 10;
 }
 
 .hero h1 {
@@ -650,6 +892,93 @@ footer {
         gap: 24px;
     }
 
+    /* LAYOUT 1 responsive styles (commented out) */
+    /*
+    .events-section {
+        padding: 24px 16px;
+        flex-direction: column;
+    }
+
+    .events-sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .events-sidebar-image {
+        max-height: 150px;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-image-wrapper {
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .event-image {
+        max-width: 150px;
+    }
+    */
+
+    /* LAYOUT 2 responsive styles */
+    .events-section-2 {
+        padding: 24px 16px;
+    }
+
+    .events-header-image-2 {
+        max-height: 150px;
+    }
+
+    .events-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .event-item-2 {
+        flex-direction: column;
+    }
+
+    .event-flyer-container-2 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .event-placeholder-2 {
+        height: 300px;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        min-width: auto;
+        padding: 16px;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .event-month,
+    .event-year,
+    .event-time {
+        font-size: 1rem;
+    }
+
+    .event-day {
+        font-size: 1.8rem;
+    }
+
+    .event-details {
+        padding: 20px 16px;
+    }
+
+    .event-details h2 {
+        font-size: 1.4rem;
+    }
+
     .pdf-viewer-container {
         height: 70vh;
     }
@@ -750,6 +1079,70 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    /* LAYOUT 1 responsive styles (commented out) */
+    /*
+    .events-section {
+        padding: 16px;
+    }
+
+    .events-sidebar-image {
+        max-height: 120px;
+    }
+
+    .event-image {
+        max-width: 120px;
+    }
+    */
+
+    /* LAYOUT 2 responsive styles */
+    .events-section-2 {
+        padding: 16px;
+    }
+
+    .events-header-image-2 {
+        max-height: 120px;
+    }
+
+    .event-flyer-2 {
+        max-width: 100%;
+    }
+
+    .event-info-box-2 {
+        padding: 16px;
+    }
+
+    .event-info-box-2 h2 {
+        font-size: 1.3rem;
+    }
+}
+
+    .event-date {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .event-month,
+    .event-year,
+    .event-time {
+        font-size: 0.9rem;
+    }
+
+    .event-day {
+        font-size: 1.5rem;
+    }
+
+    .event-details {
+        padding: 16px 12px;
+    }
+
+    .event-details h2 {
+        font-size: 1.2rem;
+    }
+
+    .event-details p {
+        font-size: 0.95rem;
+    }
+
     .volume-button {
         min-height: 120px;
         padding: 24px 16px;
@@ -821,4 +1214,63 @@ footer {
     .pdf-viewer-container {
         height: 55vh;
     }
+}
+
+/* Image Modal Styles */
+.modal {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+    visibility: visible;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 85%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    background: white;
+    padding: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100000;
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.close:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
 }
