@@ -6,11 +6,17 @@
         <link rel="stylesheet" href="styles/main.css">
         <link rel="icon" href="assets/images/PSU_ULR_logo.JPG" type="image/jpeg">
         <title>Apply - PSU Undergraduate Law Review</title>
+        <script src="scripts/nav.js" defer></script>
     </head>
     <body>
         <nav>
             <div class="nav-title">Penn State Undergraduate Law Review</div>
-            <ul class="nav-links">
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="club-roles.html">Executive Board</a></li>
                 <li class="dropdown">

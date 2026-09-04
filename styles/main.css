@@ -1,9 +1,39 @@
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
     background-color: #06013b;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
 }
 
 .nav-title {
@@ -525,4 +555,258 @@ footer {
     color: #cccccc;
     margin: 0;
     font-size: 0.9rem;
+}
+/* ===== Responsive: tablets and below ===== */
+@media (max-width: 900px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+    }
+
+    .nav-title {
+        flex: 1;
+        min-width: 0;
+        font-size: 1.05rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    nav.nav-open .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 4px;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .dropdown-btn {
+        width: 100%;
+        text-align: left;
+        padding: 14px 4px;
+    }
+
+    .dropdown-content {
+        position: static;
+        min-width: 0;
+        box-shadow: none;
+        background-color: #0d0a4f;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.dropdown-open .dropdown-content {
+        display: block;
+    }
+
+    .roles-section {
+        padding: 24px 16px;
+    }
+
+    .roles-row.two-items {
+        margin-left: 0;
+    }
+
+    .roles-row.two-items .role-card,
+    .roles-row.three-items .role-card {
+        flex: 1 1 260px;
+        max-width: 100%;
+    }
+
+    .volumes-grid {
+        padding: 0;
+        gap: 24px;
+    }
+
+    .pdf-viewer-container {
+        height: 70vh;
+    }
+
+    footer {
+        margin-top: 120px;
+    }
+
+    .compact-footer {
+        margin-top: 48px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-socials {
+        position: static;
+        left: auto;
+        transform: none;
+        order: 3;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===== Responsive: phones ===== */
+@media (max-width: 600px) {
+    .hero {
+        padding: 48px 16px;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .logo {
+        width: min(220px, 60vw);
+        height: auto;
+    }
+
+    .banner {
+        height: 140px;
+    }
+
+    .hero-button,
+    .mission-link,
+    .download-button,
+    .submit-button {
+        display: inline-block;
+        min-height: 48px;
+        padding: 14px 24px;
+        line-height: 1.4;
+    }
+
+    .mission,
+    .contact-section,
+    .volumes-section,
+    .volume-viewer-section {
+        padding: 32px 16px;
+    }
+
+    .mission h2,
+    .contact-section h2,
+    .volumes-section h2,
+    .volume-viewer-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .volumes-section h2 {
+        margin-bottom: 32px;
+    }
+
+    .mission p {
+        font-size: 1.05rem;
+    }
+
+    .section-header {
+        font-size: 1.5rem;
+    }
+
+    .role-card {
+        padding: 12px 0;
+    }
+
+    .role-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .volumes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .volume-button {
+        min-height: 120px;
+        padding: 24px 16px;
+    }
+
+    .pdf-viewer-container {
+        height: 60vh;
+    }
+
+    footer {
+        padding: 32px 16px;
+        margin-top: 64px;
+    }
+
+    .compact-footer {
+        margin-top: 32px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .footer-socials {
+        position: static;
+        left: auto;
+        transform: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-link {
+        min-height: 44px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 12px;
+    }
+
+    .nav-title {
+        font-size: 0.95rem;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .mission h2,
+    .contact-section h2,
+    .volumes-section h2,
+    .volume-viewer-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .mission p,
+    .contact-section p {
+        font-size: 1rem;
+    }
+
+    .role-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .pdf-viewer-container {
+        height: 55vh;
+    }
 }
