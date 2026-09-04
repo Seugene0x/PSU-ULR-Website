@@ -107,6 +107,18 @@ nav {
     margin: 0 auto;
 }
 
+.mission:has(+ .mission) {
+    padding-bottom: 8px;
+}
+
+.mission + .mission {
+    padding-top: 0;
+}
+
+.mission + .mission h2 {
+    margin-top: 0;
+}
+
 .mission h2 {
     font-size: 2.5rem;
     margin-bottom: 24px;
