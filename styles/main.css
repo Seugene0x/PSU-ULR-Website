@@ -322,7 +322,8 @@ nav {
 /* Events section styles - LAYOUT 2 */
 .events-section-2 {
     padding: 48px 32px;
-    max-width: 1400px;
+    width: min(100%, 1400px);
+    box-sizing: border-box;
     margin: 0 auto;
 }
 
@@ -340,24 +341,33 @@ nav {
 
 .events-grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: 32px;
 }
 
 .event-item-2 {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(220px, 32%) minmax(0, 1fr);
     gap: 24px;
-    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
 }
 
 .event-flyer-container-2 {
-    flex: 0 0 300px;
+    min-width: 0;
     position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f4f4f4;
 }
 
 .event-flyer-2 {
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: block;
+    object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -365,8 +375,8 @@ nav {
 
 .event-placeholder-2 {
     width: 100%;
-    height: 400px;
-    background-color: #06013b;
+    height: 100%;
+    background-color: #f4f4f4;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -377,17 +387,24 @@ nav {
 .event-date-overlay-2 {
     position: absolute;
     top: 16px;
-    right: 16px;
+    right: 8px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: flex-end;
 }
 
+.event-schedule-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+}
+
 .date-badge-2 {
     background-color: #06013b;
     color: white;
-    padding: 8px 16px;
+    padding: 8px 10px;
     border-radius: 4px;
     font-weight: bold;
     font-size: 1rem;
@@ -397,7 +414,7 @@ nav {
 .time-badge-2 {
     background-color: white;
     color: #06013b;
-    padding: 6px 12px;
+    padding: 6px 8px;
     border-radius: 4px;
     font-weight: bold;
     font-size: 0.9rem;
@@ -405,7 +422,7 @@ nav {
 }
 
 .event-info-box-2 {
-    flex: 1;
+    min-width: 0;
     background-color: white;
     border-radius: 8px;
     padding: 24px;
@@ -937,16 +954,15 @@ footer {
     }
 
     .event-item-2 {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .event-flyer-container-2 {
-        flex: 0 0 auto;
         width: 100%;
     }
 
     .event-placeholder-2 {
-        height: 300px;
+        height: 100%;
     }
 
     .event-card {

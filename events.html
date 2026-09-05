@@ -47,7 +47,6 @@
         <!--
         <section class="events-section">
             <div class="events-sidebar">
-                <img class="events-sidebar-image" src="assets/images/2%20meetings.png" alt="Interest Meetings">
             </div>
             <div class="events-content">
                 <div class="event-card">
@@ -114,26 +113,7 @@
 
         <!-- LAYOUT 2 -->
         <section class="events-section-2">
-            <div class="events-header-2">
-                <img class="events-header-image-2" src="assets/images/2%20meetings.png" alt="Interest Meetings">
-            </div>
-            
             <div class="events-grid-2">
-                <div class="event-item-2">
-                    <div class="event-flyer-container-2">
-                        <img class="event-flyer-2" src="assets/images/september%2010th.png" alt="September 10th Event">
-                        <div class="event-date-overlay-2">
-                            <div class="date-badge-2">Sept 10</div>
-                            <div class="time-badge-2">6:00 PM</div>
-                        </div>
-                    </div>
-                    <div class="event-info-box-2">
-                        <h2>Interest Meeting</h2>
-                        <p>Join us for our first interest meeting of the semester! Learn about the Penn State Undergraduate Law Review, meet the executive board, and discover opportunities to get involved with legal research and writing.</p>
-                        <p><strong>Location:</strong> Will be announced</p>
-                    </div>
-                </div>
-
                 <div class="event-item-2">
                     <div class="event-flyer-container-2">
                         <img class="event-flyer-2" src="assets/images/september%2011th.png" alt="September 11th Event">
@@ -145,39 +125,45 @@
                     <div class="event-info-box-2">
                         <h2>Interest Meeting</h2>
                         <p>Join us for our second interest meeting! Can't make the first one? Come to this one instead to learn about the Penn State Undergraduate Law Review and how you can get involved.</p>
-                        <p><strong>Location:</strong> Will be announced</p>
+                        <p><strong>Location:</strong>Huck Life Science Building, Room 013</p>
+                    </div>
+                </div>
+
+                <div class="event-item-2">
+                    <div class="event-flyer-container-2">
+                        <img class="event-flyer-2" src="assets/images/september%2010th.png" alt="September 10th Event">
+                        <div class="event-date-overlay-2">
+                            <div class="date-badge-2">Sept 10</div>
+                            <div class="time-badge-2">6:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="event-info-box-2">
+                        <h2>Interest Meeting</h2>
+                        <p>Join us for our first interest meeting of the semester! Learn about the Penn State Undergraduate Law Review, meet the executive board, and discover opportunities to get involved.</p>
+                        <p><strong>Location:</strong>Huck Life Science Building, Room 005</p>
                     </div>
                 </div>
 
                 <div class="event-item-2">
                     <div class="event-flyer-container-2">
                         <div class="event-placeholder-2">
+                            <img class="event-flyer-2" src="assets/images/tabling%20screenshot.png" alt="Tabling Event">
                             <div class="event-date-overlay-2">
-                                <div class="date-badge-2">Sept 9</div>
-                                <div class="time-badge-2">12:15-2:30 PM</div>
+                                <div class="event-schedule-2">
+                                    <div class="date-badge-2">Sept 8th</div>
+                                    <div class="time-badge-2">12:00-4:00 PM</div>
+                                </div>
+                                <div class="event-schedule-2">
+                                    <div class="date-badge-2">Sept 9th</div>
+                                    <div class="time-badge-2">12:00-2:00 PM</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="event-info-box-2">
                         <h2>Tabling Event</h2>
-                        <p>Join us at our tabling event! We'll have information about our organization and opportunities to get involved. Stop by and say hello!</p>
-                        <p><strong>Location:</strong> TBD (table 6)</p>
-                    </div>
-                </div>
-
-                <div class="event-item-2">
-                    <div class="event-flyer-container-2">
-                        <div class="event-placeholder-2">
-                            <div class="event-date-overlay-2">
-                                <div class="date-badge-2">Sept 8</div>
-                                <div class="time-badge-2">12:00-4:00 PM</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event-info-box-2">
-                        <h2>Tabling Event</h2>
-                        <p>Join us at our tabling event! We'll have information about our organization and opportunities to get involved. Stop by and say hello!</p>
-                        <p><strong>Location:</strong> The HUB</p>
+                        <p>Join us at our tabling events! We'll have information about our organization and opportunities to get involved. Stop by and say hello!</p>
+                        <p><strong>Location: </strong> The HUB</p>
                     </div>
                 </div>
             </div>
@@ -212,7 +198,6 @@
                 const modalImg = document.getElementById('modalImage');
                 const closeBtn = document.querySelector('.close');
 
-                // Add click event to all event images and sidebar image
                 const clickableImages = document.querySelectorAll('.event-flyer-2, .events-header-image-2');
                 
                 clickableImages.forEach(img => {
@@ -227,7 +212,6 @@
                     });
                 });
 
-                // Close modal when clicking the X
                 closeBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -236,7 +220,6 @@
                     document.body.style.overflow = 'auto';
                 });
 
-                // Close modal when clicking outside the image
                 modal.addEventListener('click', function(e) {
                     if (e.target === modal) {
                         modal.style.display = 'none';
@@ -245,7 +228,6 @@
                     }
                 });
 
-                // Close modal with Escape key
                 document.addEventListener('keydown', function(e) {
                     if (e.key === 'Escape' && modal.style.display === 'flex') {
                         modal.style.display = 'none';
